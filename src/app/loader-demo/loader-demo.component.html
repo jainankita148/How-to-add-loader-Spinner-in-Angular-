@@ -1,0 +1,25 @@
+<div>  
+    <table class="table table-dark table-striped">  
+      <thead>  
+        <tr>  
+            <th>#</th>
+            <th>API</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>URL</th> 
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let item of entries; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.API }}</td>
+            <td>{{ item.Category }}</td>
+            <td>{{ item.Description }}</td>
+            <td><a [routerLink]="[item.link]"></a>{{ item.Link }}</td>
+        </tr>
+      </tbody>  
+    </table>  
+  </div>  
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+  
